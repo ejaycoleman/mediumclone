@@ -7,6 +7,6 @@
         "mongodb": "^2.2.19"
     },
     "scripts": {
-      "dev": "nodemon server.js"
+        "dev": "nodemon server.js"
     }
 }
