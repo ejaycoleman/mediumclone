@@ -1,0 +1,12 @@
+{
+    "name": "mediumclone",
+    "main": "server.js",
+    "dependencies": {
+        "body-parser": "^1.0.2",
+        "express": "^4.0.0",
+        "mongodb": "^2.2.19"
+    },
+    "scripts": {
+      "dev": "nodemon server.js"
+    }
+}
