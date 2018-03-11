@@ -15,6 +15,16 @@ module.exports = function(app, db) {
     });
   });
 
+  app.get('/posts', (req, res) => {
+    db.collection('posts').find({}).toArray(function(err, result) {
+      if (err) {
+        res.send({'error':'An error has occurred'});
+      } else {
+        res.send(result);
+      }
+    });
+  })
+
   app.post('/posts', (req, res) => {
     const note = { title: req.body.title, content: req.body.content, authorID: req.body.authorid };
     db.collection('posts').insert(note, (err, result) => {
